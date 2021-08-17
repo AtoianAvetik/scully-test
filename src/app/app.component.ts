@@ -20,7 +20,7 @@ export class AppComponent {
         }),
     );
 
-    constructor(public scully:ScullyRoutesService,
+    constructor(public scully: ScullyRoutesService,
                 private router: Router) {
     }
 }
