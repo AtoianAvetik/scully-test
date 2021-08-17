@@ -5,6 +5,12 @@ export const config: ScullyConfig = {
     projectName: "scully-test",
     outDir: './dist/static',
     routes: {
+    '/blog/:slug': {
+      type: 'contentFolder',
+      slug: {
+        folder: "./blog"
+      }
+    },
         "/users/:userId": {
             type: "json",
             userId: {
