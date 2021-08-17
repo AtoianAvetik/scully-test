@@ -5,9 +5,9 @@ export const config: ScullyConfig = {
     projectName: "scully-test",
     outDir: './dist/static',
     routes: {
-        '/blog/:postId': {
+        '/blog/:slug': {
             type: 'contentFolder',
-            postId: {
+            slug: {
                 folder: "./blog"
             }
         },

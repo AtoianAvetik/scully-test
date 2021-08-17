@@ -1,15 +1,14 @@
 <nav *ngIf="(isAdminPage$ | async) === false">
     <a routerLink="/">Home</a>
     <a routerLink="/admin">Admin</a>
-    <a routerLink="/users">Users</a>
+<!--    <a routerLink="/users">Users</a>-->
     <a routerLink="/blog">Blog</a>
-    <a routerLink="/blog/2021-08-17-blog">Blog 1</a>
 </nav>
 
 <router-outlet></router-outlet>
 
-<!--<ul>-->
-<!--    <li *ngFor="let route of scully.available$ | async">-->
-<!--        <button mat-raised-button [routerLink]="route.route">{{ route.title || route.route }}</button>-->
-<!--    </li>-->
-<!--</ul>-->
+<ul>
+    <li *ngFor="let route of scully.available$ | async">
+        <button mat-raised-button [routerLink]="route.route">{{ route.title || route.route }}</button>
+    </li>
+</ul>
