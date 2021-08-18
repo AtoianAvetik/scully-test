@@ -1,14 +1,14 @@
-<nav *ngIf="(isAdminPage$ | async) === false">
-    <a routerLink="/">Home</a>
-    <a routerLink="/admin">Admin</a>
-<!--    <a routerLink="/users">Users</a>-->
-    <a routerLink="/blog">Blog</a>
-</nav>
-
-<router-outlet></router-outlet>
-
-<ul>
+<!--<nav *ngIf="(isAdminPage$ | async) === false">-->
+<!--    <a routerLink="/">Home</a>-->
+<!--    <a routerLink="/admin">Admin</a>-->
+<!--&lt;!&ndash;    <a routerLink="/users">Users</a>&ndash;&gt;-->
+<!--    <a routerLink="/blog">Blog</a>-->
+<!--</nav>-->
+<ul *ngIf="(isAdminPage$ | async) === false">
     <li *ngFor="let route of scully.available$ | async">
         <button mat-raised-button [routerLink]="route.route">{{ route.title || route.route }}</button>
     </li>
 </ul>
+
+<router-outlet></router-outlet>
+
